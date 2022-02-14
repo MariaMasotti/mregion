@@ -7,7 +7,7 @@ loghconst=function(delta, Omega){
 logGamma_p=function(a, p){
   p*(p-1)/4*log(pi)+sum(lgamma(a+(1-1:p)/2))
 }
-
+#read in new 3D dataset
 new_dat <- read_csv("csv_files_3D/118.csv")
 Y_new<-new_dat[,c("ADC","KTRANS","KEP","AUGC")]
 Y_new$ADC<-Y_new$ADC/100

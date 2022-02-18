@@ -10,6 +10,7 @@ logGamma_p=function(a, p){
 #read in new 3D dataset
 new_dat <- read_csv("csv_files_3D/118.csv")
 Y_new<-new_dat[,c("ADC","KTRANS","KEP","AUGC")]
+Y_new[Y_new==0]<-NA
 Y_new$ADC<-Y_new$ADC/100
 Y_new[,2:4]<-log(Y_new[,2:4])
 Y_new<-as.matrix(Y_new)
